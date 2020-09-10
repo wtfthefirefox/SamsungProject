@@ -6,6 +6,7 @@
 }
 
 .wrapper {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,4 +53,109 @@
             font-weight: 300;
         }
     }
+}
+
+.news {
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: space-between; 
+        padding: 0;
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: space-between;
+        position: relative;
+
+        &__list-items {
+            display: flex;
+            flex-direction: row;
+            justify-items: flex-start;
+        }
+
+        &__btn {
+            z-index: 1;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15.13px;
+            height: 26.48px;  
+            background-color: transparent;  
+            background-repeat: no-repeat;
+            
+            &::before {
+                content: "";
+                z-index: 10;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                background: #FFFFFF;
+                border: 2px solid #C4C4C4;
+                border-radius: 50%;
+            }
+
+            &-right {
+                background-image: url(../svg/arrow-right.svg);
+                right: 62px;
+            }
+
+            &-left {
+                background-image: url(../svg/arrow-left.svg);
+                left: 62px;
+            }
+        }
+
+        &-item {
+            box-sizing: border-box;
+            width: 1366px;
+            height: 768.38px;
+            padding: 40px;
+            display: none;
+
+            &-active {
+                display: block;
+            }
+
+            &__title {
+                position: absolute;
+                top: 80px;
+                left: 100px;
+                max-width: 250px;
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+
+                color: #000000;
+            }
+
+            &__description {
+                position: absolute;
+                bottom: 80px;
+                right: 100px;
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+.galaxyZFlip {
+    background-image: url(../img/36Gy2aThDCQVXxbX7yyRtF.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
