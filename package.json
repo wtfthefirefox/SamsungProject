@@ -1,7 +1,7 @@
 {
   "name": "cat",
   "version": "1.0.0",
-  "description": "Website about cats",
+  "description": "Website about samsung projects",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
@@ -14,8 +14,9 @@
   "author": "Andrey",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "autoprefixer": "^9.8.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
@@ -26,10 +27,18 @@
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   }
 }

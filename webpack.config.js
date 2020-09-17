@@ -7,15 +7,17 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, 'dist'),
         publicPath: '/dist'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                loader: "babel-loader",
-                exclude: "/node_modules/"
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: "babel-loader"
+                }
             },
             {
                 test: /\.scss$/,
@@ -27,7 +29,7 @@ module.exports = {
                         options: { sourceMap: true}
                     }, {
                         loader: "postcss-loader",
-                        options: { sourceMap: true, config: {path: 'src/js/postcss.config.js'}}
+                        options: { sourceMap: true, config: {path: './postcss.config.js'}}
                     }, {
                         loader: "sass-loader",
                         options: { sourceMap: true}
@@ -45,7 +47,7 @@ module.exports = {
                         options: { sourceMap: true}
                     }, {
                         loader: "postcss-loader",
-                        options: { sourceMap: true, config: {path: 'src/js/postcss.config.js'}}
+                        options: { sourceMap: true, config: {path: './postcss.config.js'}}
                     }, {
                         loader: "sass-loader",
                         options: { sourceMap: true}
@@ -73,9 +75,6 @@ module.exports = {
                 ]
             }
         ]
-    },
-    devServer: {
-        overlay: true
     },
     plugins: [
         new MiniCssExtractPlugin({
