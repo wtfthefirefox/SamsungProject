@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Header from "./components/header";
+import App from "./components/app";
 
 import '../assets/scss/index.scss';
 
 ReactDOM.render(
-  <Header />, 
+  <App />, 
   document.querySelector("#root")
 );

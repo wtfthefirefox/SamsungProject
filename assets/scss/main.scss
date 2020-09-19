@@ -110,7 +110,6 @@
         }
         
         &__btn {
-            order: 1;
             cursor: pointer;
             position: absolute;
             top: 50%;
@@ -120,19 +119,17 @@
             background-color: transparent;  
             background-repeat: no-repeat;
             
-            // &::before {
-            //     content: "";
-            //     order: 10;
-            //     position: absolute;
-            //     top: 50%;
-            //     left: 50%;
-            //     transform: translate(-50%, -50%);
-            //     width: 60px;
-            //     height: 60px;
-            //     background: #FFFFFF;
-            //     border: 2px solid #C4C4C4;
-            //     border-radius: 50%;
-            // }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                border: 2px solid #C4C4C4;
+                border-radius: 50%;
+            }
 
             &-right {
                 background-image: url(../svg/arrow-right.svg);
@@ -152,7 +149,6 @@
             width: 100%;
             padding: 40px;
             display: none;
-            background-size: cover;
 
             &-active {
                 display: block;
