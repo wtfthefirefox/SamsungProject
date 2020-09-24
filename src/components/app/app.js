@@ -1,12 +1,13 @@
 import React from 'react';
+
 import NewsSlider from '../newsSlider';
-import Header from '../header';
+import AboutSection from '../aboutSection';
 
 const App = () => {
     return (
         <>
-            <Header />
             <NewsSlider />
+            <AboutSection />
         </>
     )
 }

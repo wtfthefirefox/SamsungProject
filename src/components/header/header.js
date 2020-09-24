@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -6,7 +7,9 @@ const Header = () => {
       <div className="container header">
         <div className="wrapper header__wrapper">
           <nav className="header__nav">
-            <img src="./assets/svg/logo.svg" alt="logo" className="header__logo"></img>
+            <Link to="/">
+              <img src="./assets/svg/logo.svg" alt="logo" className="header__logo" />
+            </Link>
             <ul className="header__nav-list">
               <li className="header__item">
                 <a href="#" className="header__item-link">About us</a> 
