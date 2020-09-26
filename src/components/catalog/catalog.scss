@@ -1,0 +1,46 @@
+.catalog {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 93px;
+    }
+
+    &__title {
+        text-align: center;
+        font-family: "Inria Serif";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 48px;
+        color: #000000;
+        margin-bottom: 78px;
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        max-width: 1366px;
+        overflow: hidden;
+        padding-bottom: 50px;
+    }
+
+    &__item {
+        box-sizing: border-box;
+        width: 350px;
+        height: 396px;
+        margin-right: 65px;
+
+        &-title {
+            font-family: "Inria Serif";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 43px;
+            text-align: center;
+            color: #000000;
+            background-color: rgba(219, 253, 207, 0.56);
+        }
+    }
+}

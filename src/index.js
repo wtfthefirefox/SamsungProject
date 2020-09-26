@@ -10,9 +10,8 @@ import '../assets/scss/index.scss';
 
 ReactDOM.render(
   <Router>
+    <Header />
     <Switch>
-      <Header />
-      {/* <Route path="/" component={Header}/> */}
       <Route exact path="/" component={App}/>
       <Route path="/about/" component={AboutPage}/>
     </Switch>
