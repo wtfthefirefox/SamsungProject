@@ -1,9 +1,11 @@
 .catalog {
     &__wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 0 93px;
+        padding: 0 90px;
+        overflow: hidden;
     }
 
     &__title {
@@ -18,19 +20,22 @@
     }
 
     &__items {
-        width: 100%;
         display: flex;
         flex-direction: row;
-        max-width: 1366px;
-        overflow: hidden;
         padding-bottom: 50px;
+        transition: 1s ease-out;
     }
 
     &__item {
+        cursor: pointer;
         box-sizing: border-box;
         width: 350px;
         height: 396px;
-        margin-right: 65px;
+        margin-right: 70px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &-title {
             font-family: "Inria Serif";
@@ -40,7 +45,47 @@
             line-height: 43px;
             text-align: center;
             color: #000000;
-            background-color: rgba(219, 253, 207, 0.56);
+            // background-color: rgba(219, 253, 207, 0.56);
+            background-color: #eee787; // tempoary color
+            border-radius: 20px;
+        }
+    }
+
+    &__slider {
+        &-btn {
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            box-sizing: border-box;
+            width: 15.13px;
+            height: 26.48px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &::before {
+                content: "";
+                position: absolute;
+                box-sizing: border-box;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border: 2px solid #C4C4C4;
+                border-radius: 50%;
+            }
+
+            &--left {
+                background-image: url('../../../assets/svg/arrow-left.svg');
+                left: 5%;
+            }
+
+            &--right {
+                background-image: url('../../../assets/svg/arrow-right.svg');
+                right: 5%;
+            }
         }
     }
 }

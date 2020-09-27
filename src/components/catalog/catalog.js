@@ -3,6 +3,28 @@ import React from 'react';
 import './catalog.scss';
 
 const Catalog = () => {
+    const onChangeCatalog = (sign) => {
+        let catalogItems = document.querySelector('.catalog__items');
+
+        if (!catalogItems.style.transform) {
+            if (sign === '+') {
+                catalogItems.style.transform += `translateX(0px)`;
+            } else {
+               catalogItems.style.transform += `translateX(${sign === '-' ? '-': ''}1280px)`; 
+            }
+        } else {
+            catalogItems.style.transform.split(' ').forEach(item => {
+                if (item.includes('translateX')) {
+                    let transformValue = sign === '-' ? parseInt(item.slice(11, item.length - 3), 10) - 1280 : parseInt(item.slice(11, item.length - 3), 10) + 1280
+
+                    if (transformValue <= 0 && Math.abs(transformValue) / 1280 < Math.round(document.querySelectorAll('.catalog__item').length / 3)) {
+                        catalogItems.style = `transform: translateX(${transformValue}px)`;
+                    } 
+                }
+            });
+        }
+    }
+    
     return (
         <div className="catalog">
             <div className="container">
@@ -46,6 +68,8 @@ const Catalog = () => {
                             </div>
                         </li>
                     </ul>
+                    <button type="button" className="catalog__slider-btn catalog__slider-btn--left" onClick={() => onChangeCatalog('+')}/>
+                    <button type="button" className="catalog__slider-btn catalog__slider-btn--right" onClick={() => onChangeCatalog('-')}/>
                 </div>
             </div>
         </div>

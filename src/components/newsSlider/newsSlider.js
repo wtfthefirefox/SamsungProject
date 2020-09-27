@@ -8,8 +8,6 @@ const NewsSlider = () => {
             <div className="news__slider">
               <ul className="news__slider__list-items">
                 <li className="news__slider-item news__slider-item-active galaxyZFlip">
-                  {/* <h2 className="news__slider-item__title">Galaxy Z Flip</h2>
-                  <h2 className="news__slider-item__description">Preoder now</h2> */}
                 </li>
               </ul>
               <button className="news__slider__btn news__slider__btn-left"></button>
