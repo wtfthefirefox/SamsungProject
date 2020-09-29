@@ -71,12 +71,14 @@
         justify-items: flex-start;
         align-items: space-between;
         position: relative;
+        overflow: hidden;
 
         &__list {
             &-items {
                 display: flex;
                 flex-direction: row;
                 justify-items: flex-start;
+                transition: transform 1s ease-out;
             }
 
             &-points {
@@ -147,38 +149,14 @@
             width: 1366px;
             height: 768.38px;
             box-sizing: border-box;
-            width: 100%;
-            padding: 40px;
-            display: none;
 
-            &-active {
-                display: block;
+            &:last-child {
+                margin-right: 0;
             }
 
-            &__title {
-                position: absolute;
-                top: 80px;
-                left: 100px;
-                max-width: 250px;
-                font-family: "Roboto";
-                font-style: normal;
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 35px;
-
-                color: #000000;
-            }
-
-            &__description {
-                position: absolute;
-                bottom: 80px;
-                right: 100px;
-                font-family: "Roboto";
-                font-style: normal;
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 35px;
-                color: #000000;
+            img {
+                width: 1366px;
+                height: 768.38px;
             }
         }
     }
@@ -186,14 +164,15 @@
 
 .galaxyZFlip {
     background-image: url(../img/36Gy2aThDCQVXxbX7yyRtF.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+}
+
+.samsungWatch3 {
+    background-image: url(../img/samsungWatch3.png);
 }
 
 .points--active {
     border: 2px solid #000000;
 }
-
 
 .container {
     margin: 0 auto;
