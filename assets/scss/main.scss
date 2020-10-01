@@ -57,6 +57,7 @@
 
 .news {
     &__wrapper {
+        position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -70,7 +71,6 @@
         flex-direction: column;
         justify-items: flex-start;
         align-items: space-between;
-        position: relative;
         overflow: hidden;
 
         &__list {
@@ -136,12 +136,12 @@
 
             &-right {
                 background-image: url(../svg/arrow-right.svg);
-                right: 62px;
+                right: -15px;
             }
 
             &-left {
                 background-image: url(../svg/arrow-left.svg);
-                left: 62px;
+                left: -15px;
             }
         }
 

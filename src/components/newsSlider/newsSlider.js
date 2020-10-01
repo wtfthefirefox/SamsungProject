@@ -39,8 +39,6 @@ const NewsSlider = () => {
                 <img src="../../../assets/img/s20+.jpg" />
               </li>
             </ul>
-            <button className="news__slider__btn news__slider__btn-left" onClick={() => onChangeNewsSlider('+')}></button>
-            <button className="news__slider__btn news__slider__btn-right" onClick={() => onChangeNewsSlider('-')}></button>
             <ul className="news__slider__list-points">
               <li className="news__slider-points--item points--active"></li>
               <li className="news__slider-points--item"></li>
@@ -51,6 +49,8 @@ const NewsSlider = () => {
               <li className="news__slider-points--item"></li>
             </ul>
           </div>
+          <button className="news__slider__btn news__slider__btn-left" onClick={() => onChangeNewsSlider('+')}></button>
+          <button className="news__slider__btn news__slider__btn-right" onClick={() => onChangeNewsSlider('-')}></button>
         </div>
       </div>
     </section>
