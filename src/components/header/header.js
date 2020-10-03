@@ -12,16 +12,16 @@ const Header = () => {
             </Link>
             <ul className="header__nav-list">
               <li className="header__item">
-                <Link to="/about/" className="header__item-link">About us</Link> 
+                <a className="header__item-link" onClick={() => document.querySelector('.aboutSection').scrollIntoView()} >About us</a> 
               </li>
               <li className="header__item">
-                <a href="#" className="header__item-link">Catalog</a>
+                <a className="header__item-link" onClick={() => document.querySelector('.catalog').scrollIntoView()}>Catalog</a>
               </li>
               <li className="header__item">
-                <a href="#" className="header__item-link">News</a>
+                <a className="header__item-link" onClick={() => document.querySelector('.news').scrollIntoView()}>News</a>
               </li>
               <li className="header__item">
-                <Link to="/item" className="header__item-link">Support</Link>
+                <a className="header__item-link">Support</a>
               </li> 
             </ul>
           </nav>

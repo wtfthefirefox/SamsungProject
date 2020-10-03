@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const NewsSlider = () => {
   const onChangeNewsSlider = (sign) => {
@@ -30,7 +31,9 @@ const NewsSlider = () => {
           <div className="news__slider">
             <ul className="news__slider__list-items">
               <li className="news__slider-item" >
-                <img src="../../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg" />
+                <Link to="/item">
+                  <img src="../../../assets/img/36Gy2aThDCQVXxbX7yyRtF.jpg" />
+                </Link>
               </li>
               <li className="news__slider-item">
                 <img src="../../../assets/img/samsungWatch3.png" />
