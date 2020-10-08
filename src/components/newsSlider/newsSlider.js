@@ -65,10 +65,6 @@ const NewsSlider = () => {
               <li className="news__slider-points--item points--active" />
               <li className="news__slider-points--item" />
               <li className="news__slider-points--item" />
-              {/* <li className="news__slider-points--item" />
-              <li className="news__slider-points--item" />
-              <li className="news__slider-points--item" />
-              <li className="news__slider-points--item" /> */}
             </ul>
           </div>
           <button className="news__slider__btn news__slider__btn-left" onClick={() => onChangeNewsSlider('+')} />
