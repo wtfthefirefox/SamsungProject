@@ -20,9 +20,6 @@ const Header = () => {
               <li className="header__item">
                 <a className="header__item-link" onClick={() => document.querySelector('.news').scrollIntoView()}>News</a>
               </li>
-              <li className="header__item">
-                <a className="header__item-link">Support</a>
-              </li> 
             </ul>
           </nav>
         </div>
