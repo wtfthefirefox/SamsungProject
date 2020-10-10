@@ -6,20 +6,26 @@ const NewsSlider = () => {
     let catalogItems = document.querySelector('.news__slider__list-items');
 
     if (!catalogItems.style.transform) {
-      if (sign === '+') {
-          catalogItems.style.transform += `translateX(0px)`;
-      } else {
-          catalogItems.style.transform += `translateX(${sign === '-' ? '-': ''}1366px)`; 
-      }
+      catalogItems.style.transform += `translateX(${sign === '-' ? '-': ''}1366px)`; 
     } else {
       catalogItems.style.transform.split(' ').forEach(item => {
-          if (item.includes('translateX')) {
-              let transformValue = sign === '-' ? parseInt(item.slice(11, item.length - 3), 10) - 1366 : parseInt(item.slice(11, item.length - 3), 10) + 1366
+        if (item.includes('translateX')) {
+          let transformValue = sign === '-' ? parseInt(item.slice(11, item.length - 3), 10) - 1366 : parseInt(item.slice(11, item.length - 3), 10) + 1366
 
-              if (transformValue <= 0 && Math.abs(transformValue) / 1366 < document.querySelectorAll('.news__slider-item').length) {
-                  catalogItems.style = `transform: translateX(${transformValue}px)`;
-              } 
-          }
+          if (transformValue <= 0 && Math.abs(transformValue) / 1366 < document.querySelectorAll('.news__slider-item').length) {
+            catalogItems.style = `transform: translateX(${transformValue}px)`;
+
+            let itemsActive = document.querySelectorAll('.news__slider-points--item');
+            
+            itemsActive.forEach(item => {
+              if (item.classList.contains('points--active')) {
+                item.classList.remove('points--active');
+              }
+            })
+
+            itemsActive[Math.abs(transformValue) / 1366].classList.add('points--active');
+          } 
+        }
       });
     }
   };
